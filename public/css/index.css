@@ -1,42 +1,139 @@
 .App {
+  font-family: 'Anton', sans-serif;
   text-align: center;
+  
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.header {
   height: 100px;
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color:black;
+  font-family: 'Poiret One', cursive;
+
+}
+
+.header::after{
+  margin: 0 auto;
+  display: block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  opacity: 0.5;
+  background: #ff8d00;
+}
+
+.header__navbar{
+  background-color: transparent;
 }
 
 .header__title {
-  height: 100px;
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 10px;
+  color: black;
+  text-shadow: 0 0 3px white;
 }
 
-.App-link {
-  color: #61dafb;
+.header__navigation-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navigation-list__item a{
+  margin-right: 10px;
+  color: #ff8d00;
+}
+
+.main {
+  height:1000px;
+  padding-top: 45px;
+  background: black;
+  font-size: 24px;
+  color: white;
+}
+
+.main__title {
+  margin-top:0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 80px;
+  color: black;
+  text-shadow: 1px 1px 5px white;
+}
+
+.place-mixology {
+
+}
+
+.place-mixology__title {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: black;
+  text-shadow: 0px 0px 3px white;
+}
+
+.ingredient-group{
+  font-family: 'Poiret One', cursive;
+  font-size: 26px;
+  color: #ff8d00;
+}
+
+.shaker {
+  height: 200px;
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./../img/shaker-icon.png");
+}
+
+.light {
+  position: absolute;
+  margin: auto;
+  height: 300px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.light img {/*Изображение внутри*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.light:before {/*Создает конус света*/
+  content: "";
+  position: absolute;
+  bottom: 100%;/*расположить над изображением*/
+  left: 50%;
+  height: 20px;
+  width: 100px;
+  border-radius: 50%;
+  background: lightgray;
+  transform: translateX(-50%);/*Поместить в центр изображения*/
+  z-index: 10;/*Разместить впнреди изображения*/
+  border: 2px solid dimgray;/*бордюры добавляют 3D-эффект лампочке*/
+  border-bottom: none;
+  border-top: 5px solid #222;
+}
+
+.light:after {/*создает луч*/
+  content: "";
+  position: absolute;
+  transition: all 0.1s;
+  height: 0;
+  width: 100px;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) perspective(400px) rotateX(75deg);/*центры, делает как трапеции*/
+  transform-origin: top center;
+  background: linear-gradient(0deg, transparent, rgba(255, 255, 255, 0.8));/*adds fading light*/
+  z-index: 5;/*помещается перед изображением, но за лампочкой*/
+}
+
+.light:hover:after {/*demo only, add this to .light:after in production*/
+  height: 100%;
 }
