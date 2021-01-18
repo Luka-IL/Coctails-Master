@@ -74,21 +74,40 @@
   text-shadow: 0px 0px 3px white;
 }
 
+.ingredient-list__item {
+  width: 250px;
+  margin: 0 auto;
+}
+
 .ingredient-group{
   font-family: 'Poiret One', cursive;
   font-size: 26px;
   color: #ff8d00;
 }
 
-.shaker {
-  height: 200px;
-  background-size: 200px 200px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("./../img/shaker-icon.png");
+
+.dropdown-content{
+  background: grey;
+  border:1px solid #ff8d00;
 }
 
-.light {
+.shaker {
+  z-index: 2;
+  fill: transparent; 
+  stroke:rgba(255, 0, 0);
+}
+
+.shaker::before {
+  z-index: -1;
+  position: absolute;
+  width:200px;
+  height: 200px;
+  display: block;
+  content: "";
+  background-color: rgb(255, 0, 0);
+}
+
+/*.light {
   position: absolute;
   margin: auto;
   height: 300px;
@@ -96,7 +115,7 @@
   margin-top: 20px;
 }
 
-.light img {/*Изображение внутри*/
+.light img {//Изображение внутри
   position: absolute;
   top: 0;
   left: 0;
@@ -104,23 +123,23 @@
   width: 100%;
 }
 
-.light:before {/*Создает конус света*/
+.light:before {//Создает конус света
   content: "";
   position: absolute;
-  bottom: 100%;/*расположить над изображением*/
+  bottom: 100%;//расположить над изображением
   left: 50%;
   height: 20px;
   width: 100px;
   border-radius: 50%;
   background: lightgray;
-  transform: translateX(-50%);/*Поместить в центр изображения*/
-  z-index: 10;/*Разместить впнреди изображения*/
-  border: 2px solid dimgray;/*бордюры добавляют 3D-эффект лампочке*/
+  transform: translateX(-50%);//Поместить в центр изображения
+  z-index: 10;//Разместить впнреди изображения
+  border: 2px solid dimgray;//бордюры добавляют 3D-эффект лампочке
   border-bottom: none;
   border-top: 5px solid #222;
 }
 
-.light:after {/*создает луч*/
+.light:after {//создает луч
   content: "";
   position: absolute;
   transition: all 0.1s;
@@ -128,12 +147,12 @@
   width: 100px;
   top: -10px;
   left: 50%;
-  transform: translateX(-50%) perspective(400px) rotateX(75deg);/*центры, делает как трапеции*/
+  transform: translateX(-50%) perspective(400px) rotateX(75deg);//центры, делает как трапеции
   transform-origin: top center;
-  background: linear-gradient(0deg, transparent, rgba(255, 255, 255, 0.8));/*adds fading light*/
-  z-index: 5;/*помещается перед изображением, но за лампочкой*/
+  background: linear-gradient(0deg, transparent, rgba(255, 255, 255, 0.8));//adds fading light
+  z-index: 5;//помещается перед изображением, но за лампочкой
 }
 
-.light:hover:after {/*demo only, add this to .light:after in production*/
+.light:hover:after {//demo only, add this to .light:after in production
   height: 100%;
-}
+}*/
