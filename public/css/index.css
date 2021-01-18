@@ -92,19 +92,14 @@
 }
 
 .shaker {
-  z-index: 2;
-  fill: transparent; 
-  stroke:rgba(255, 0, 0);
+  height: 512px;
+  background-size: contain;
+  background-image: url("../img/pngwing.com_1\ \(1\).svg");
+  background-repeat: no-repeat;
 }
 
-.shaker::before {
-  z-index: -1;
-  position: absolute;
-  width:200px;
-  height: 200px;
-  display: block;
-  content: "";
-  background-color: rgb(255, 0, 0);
+.shaker__list {
+  padding-top: 60px;
 }
 
 /*.light {
