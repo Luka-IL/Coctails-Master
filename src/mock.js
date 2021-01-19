@@ -2,28 +2,28 @@ export const ingredients = [
   {
     title: `Крепкий алкоголь`,
     group: `alcohol`,
-    ingredient: [
+    ingredients: [
       'Виски', `Водка`
     ]
   },
   {
     title: `Ликер`,
     group: `alcohol`,
-    ingredient: [
+    ingredients: [
       'Апельсиновый', `Кофейный`
     ]
   },
   {
     title: `Газировка`,
     group: `not-alcohol`,
-    ingredient: [
+    ingredients: [
       'Содовая', `Кола`, `Спрайт`
     ]
   },
   {
     title: `Сок`,
     group: `not-alcohol`,
-    ingredient: [
+    ingredients: [
       'Апельсиновый', `Яблочный`, `Вишневый`, `Ананасовый`
     ]
   }

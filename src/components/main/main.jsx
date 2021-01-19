@@ -1,7 +1,8 @@
-import React from "react"
-import IngredientGroup from "../ingredient-group/ingredient-group"
-import {ingredients} from "../../mock"
-import {alcoholFilter, notAlcoholFilter} from "../../utils"
+import React from "react";
+import IngredientGroup from "../ingredient-group/ingredient-group";
+import Shaker from "../shaker/shaker";
+import {ingredients} from "../../mock";
+import {alcoholFilter, notAlcoholFilter} from "../../utils";
 
 const Main = () => {
   return (
@@ -14,37 +15,34 @@ const Main = () => {
             {alcoholFilter(ingredients).map((item, id) => {
               return (
                 <IngredientGroup
-                  key={id}
+                  key={item.title}
                   ingredient={item}
                   id={id}
                 />
-              )
+              );
             }
             )}
           </ul>
         </div>
-        <div className="shaker col s4">
-          <ul className="shaker__list">
-            <li className="shaker__item">Vodka</li>
-          </ul>
-        </div>
+        <Shaker />
         <div className="ingredient col s4">
           <h3 className="place-mixology__title ingredient__title">Not Alcohol</h3>
           <ul className="ingredient-list">
             {notAlcoholFilter(ingredients).map((item, id) => {
+              console.log(item.title)
               return (
                 <IngredientGroup
-                  key={id}
+                  key={item.title}
                   ingredient={item}
                   id={id}
                 />
-              )
+              );
             }
             )}
           </ul>
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 export default Main;

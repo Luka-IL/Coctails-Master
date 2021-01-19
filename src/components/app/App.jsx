@@ -1,6 +1,6 @@
-import React from "react"
-import Main from "../main/main"
-import Header from "../header/header"
+import React from "react";
+import Main from "../main/main";
+import Header from "../header/header";
 
 function App() {
   return (
@@ -9,6 +9,6 @@ function App() {
       <Main />
     </div>
   );
-};
+}
 
 export default App;

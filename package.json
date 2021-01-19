@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
     "normalize.css": "8.0.1",
+    "prop-types": "15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-materialize": "3.9.6",
@@ -16,10 +17,10 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "webpack-dev-server",
     "build": "webpack --mode production",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eslint": "eslint --ext .jsx --ext .js src/",
+    "start": "webpack-dev-server",
+    "test": "npm run eslint"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +45,9 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "7.12.10",
     "babel-loader": "8.1.0",
+    "eslint": "5.13.0",
+    "eslint-config-htmlacademy": "0.5.2",
+    "eslint-plugin-react": "7.18.3",
     "materialize-css": "1.0.0-rc.2",
     "webpack": "^4.41.6",
     "webpack-cli": "3.3.12",
