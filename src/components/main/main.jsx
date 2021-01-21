@@ -42,6 +42,7 @@ const Main = () => {
           </ul>
         </div>
       </div>
+      <button className="shaker-mix-button">Shake that</button>
     </main>
   );
 };

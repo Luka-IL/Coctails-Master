@@ -151,3 +151,7 @@
 .light:hover:after {//demo only, add this to .light:after in production
   height: 100%;
 }*/
+
+.shake-mix-button {
+  margin: 0 auto;
+}
